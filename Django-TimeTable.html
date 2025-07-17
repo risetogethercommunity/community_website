@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Essentials Plan | Rise Together</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0D1117;
+            color: #C9D1D9;
+        }
+        .glass-nav {
+            background: rgba(22, 27, 34, 0.7);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #30363D;
+        }
+        .hero-gradient-text {
+            background: linear-gradient(90deg, #58A6FF, #A371F7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-card {
+            background-color: #161B22;
+            border: 1px solid #30363D;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+        }
+        .day-entry {
+            border-left: 3px solid #30363D;
+            padding-left: 1.5rem;
+            transition: border-color 0.3s ease;
+        }
+        .day-entry:hover {
+            border-left-color: #58A6FF;
+        }
+        .day-entry ul {
+            list-style-type: '✓  ';
+            padding-left: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navbar -->
+    <header class="glass-nav sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="community_page.html" class="flex items-center space-x-2">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-[#58A6FF]"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <span class="text-xl font-bold text-white">Rise Together</span>
+            </a>
+            <a href="community_page.html#timetables" class="hidden md:block bg-transparent border border-blue-500 text-blue-500 font-semibold px-4 py-2 rounded-lg hover:bg-blue-500 hover:text-white transition-colors">
+                ← Back to Timetables
+            </a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- Page Header -->
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white">Full Stack & DevOps Track</h1>
+            <p class="text-2xl md:text-3xl font-semibold hero-gradient-text mt-2">15-Day Django Essentials</p>
+            <p class="text-lg text-gray-400 mt-4 max-w-3xl mx-auto">A rapid, project-based sprint to master the fundamentals of Django for building powerful web applications.</p>
+        </section>
+
+        <!-- Prerequisites & Skipped Topics -->
+        <section class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="section-card">
+                <h2 class="text-2xl font-bold text-[#58A6FF] mb-4">🔑 Prerequisites</h2>
+                <ul class="list-disc list-inside space-y-2 text-gray-300">
+                    <li>Solid Python fundamentals (functions, classes, data structures).</li>
+                    <li>Basic HTML, CSS, and an awareness of JavaScript.</li>
+                    <li>Understanding of the client-server model and HTTP.</li>
+                    <li>Familiarity with basic database concepts (tables, rows, columns).</li>
+                </ul>
+            </div>
+            <div class="section-card border-yellow-500/50">
+                <h2 class="text-2xl font-bold text-yellow-400 mb-4">🚫 Topics We're Skipping</h2>
+                <ul class="list-disc list-inside space-y-2 text-gray-300">
+                    <li>Class-Based Views (we start with functions for clarity).</li>
+                    <li>Django Rest Framework (DRF) and API development.</li>
+                    <li>Advanced topics like Custom Middleware, Signals, or Celery.</li>
+                    <li>Containerization (Docker) and CI/CD pipelines.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Detailed Timetable -->
+        <section class="section-card">
+             <h2 class="text-3xl font-bold text-center text-[#58A6FF] mb-8">📅 15-Day Detailed Timetable</h2>
+
+             <!-- Week 1 -->
+             <div class="mb-12">
+                <h3 class="text-2xl font-bold text-white mb-6">Week 1 (Days 1-7): Core Concepts & First Project</h3>
+                <div class="space-y-8">
+                    <div class="day-entry">
+                        <h4 class="text-xl font-semibold text-gray-200">Day 1-2: Setup, Views & Templates</h4>
+                        <ul class="mt-2 text-gray-400">
+                            <li>Understand Django's MVT architecture.</li>
+                            <li>Install Django, create a project and an app.</li>
+                            <li>Master URL routing and function-based views (FBVs).</li>
+                            <li>Connect views to templates and serve static files (CSS/JS).</li>
+                        </ul>
+                    </div>
+                     <div class="day-entry">
+                        <h4 class="text-xl font-semibold text-gray-200">Day 3-4: Models, ORM & Templating</h4>
+                        <ul class="mt-2 text-gray-400">
+                            <li>Define models and run migrations to create database tables.</li>
+                            <li>Perform CRUD operations using the Django ORM and Shell.</li>
+                            <li>Implement template inheritance and use Jinja2 tags/filters.</li>
+                        </ul>
+                    </div>
+                     <div class="day-entry">
+                        <h4 class="text-xl font-semibold text-gray-200">Day 5-7: Admin, Forms & Authentication</h4>
+                        <ul class="mt-2 text-gray-400">
+                            <li>Customize the powerful Django Admin panel.</li>
+                            <li>Create forms, handle POST requests, and validate data.</li>
+                            <li>Implement user registration, login, logout, and protect routes.</li>
+                        </ul>
+                    </div>
+                </div>
+             </div>
+
+             <!-- Week 2 -->
+             <div>
+                <h3 class="text-2xl font-bold text-white mb-6">Week 2 (Days 8-15): Advanced Features & Final Project</h3>
+                 <div class="space-y-8">
+                    <div class="day-entry">
+                        <h4 class="text-xl font-semibold text-gray-200">Day 8-9: Mini Project & Email</h4>
+                        <ul class="mt-2 text-gray-400">
+                            <li><strong>Mini Project:</strong> Build a complete Portfolio Website to solidify concepts.</li>
+                            <li>Implement email sending for a contact form (e.g., via Gmail SMTP).</li>
+                        </ul>
+                    </div>
+                    <div class="day-entry">
+                        <h4 class="text-xl font-semibold text-gray-200">Day 10-12: Enhancing User Experience</h4>
+                        <ul class="mt-2 text-gray-400">
+                            <li>Use the Django Messaging Framework for flash messages (e.g., "Login successful!").</li>
+                            <li>Implement pagination for long lists of data.</li>
+                            <li>Learn about Django Signals for event-driven actions (e.g., creating a user profile automatically).</li>
+                        </ul>
+                    </div>
+                    <div class="day-entry">
+                        <h4 class="text-xl font-semibold text-green-400">Day 13-15: Final Project - Blog Platform</h4>
+                        <ul class="mt-2 text-gray-400">
+                            <li>Revise all concepts and plan the blog project architecture.</li>
+                            <li>Build the core models (Post, Comment, Category) and views.</li>
+                            <li>Implement create/edit forms, user authentication, and messaging.</li>
+                            <li>Deploy locally and present the final, functional blog application.</li>
+                        </ul>
+                    </div>
+                </div>
+             </div>
+        </section>
+    </main>
+</body>
+</html>

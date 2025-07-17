@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rise Together - Tech Community</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0D1117;
+            color: #C9D1D9;
+        }
+
+        .glass-nav {
+            background: rgba(22, 27, 34, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid #30363D;
+        }
+
+        .hero-gradient-text {
+            background: linear-gradient(90deg, #58A6FF, #A371F7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .section-card {
+            background-color: #161B22;
+            border: 1px solid #30363D;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px -15px rgba(163, 113, 247, 0.3);
+        }
+
+        .skill-tag {
+            background-color: #21262D;
+            border: 1px solid #30363D;
+            transition: all 0.2s ease-in-out;
+        }
+        .skill-tag:hover {
+            background-color: #30363D;
+            color: #58A6FF;
+        }
+        
+        .timetable-card {
+            background: #161B22;
+            border: 1px solid #30363D;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .timetable-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(88, 166, 255, 0.15) 0%, rgba(88, 166, 255, 0) 70%);
+            transition: opacity 0.5s ease;
+            opacity: 0;
+            transform-origin: center;
+        }
+        .timetable-card:hover::before {
+            opacity: 1;
+        }
+        .timetable-card:hover {
+            border-color: #58A6FF;
+        }
+
+        .btn-primary {
+            background: #238636;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background: #2EA043;
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            border: 1px solid #58A6FF;
+            color: #58A6FF;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+             background-color: #58A6FF;
+             color: #FFFFFF;
+        }
+
+        /* Scroll Animation */
+        .reveal {
+            position: relative;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: 1s all ease;
+        }
+
+        .reveal.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navbar -->
+    <header id="navbar" class="glass-nav sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <!-- Add your logo here -->
+                <img src="logo.png" alt="Logo" class="h-10 rounded-10">
+                <span class="text-xl font-bold text-white">Rise Together</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#market" class="text-gray-300 hover:text-white transition">Job Market</a>
+                <a href="#skills" class="text-gray-300 hover:text-white transition">Our Skills</a>
+                <a href="#goals" class="text-gray-300 hover:text-white transition">Our Goals</a>
+                <a href="#timetables" class="text-gray-300 hover:text-white transition">Timetables</a>
+            </div>
+            <a href="#" class="hidden md:block btn-primary text-white font-semibold px-4 py-2 rounded-lg">Join Community</a>
+             <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+         <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#market" class="block text-gray-300 hover:text-white transition">Job Market</a>
+            <a href="#skills" class="block text-gray-300 hover:text-white transition">Our Skills</a>
+            <a href="#goals" class="block text-gray-300 hover:text-white transition">Our Goals</a>
+            <a href="#timetables" class="block text-gray-300 hover:text-white transition">Timetables</a>
+            <a href="#" class="block btn-primary text-white font-semibold px-4 py-2 rounded-lg text-center mt-2">Join Community</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Hero Section -->
+        <section id="hero" class="text-center py-20">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight">
+                Forge Your Future in Tech. <br>
+                <span class="hero-gradient-text">Rise Together.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mt-6">
+                We are a community of builders, innovators, and lifelong learners navigating the dynamic tech landscape. We collaborate, master in-demand skills, and build the future, side-by-side.
+            </p>
+            <div class="mt-8 flex justify-center gap-4">
+                <a href="#timetables" class="btn-primary text-white font-bold py-3 px-8 rounded-lg text-lg">Start Learning</a>
+                <a href="#market" class="btn-secondary font-bold py-3 px-8 rounded-lg text-lg">See The Market</a>
+            </div>
+        </section>
+
+        <!-- Timetable Section -->
+        <section id="timetables" class="py-20 reveal">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-white">Our Learning Tracks & Timetables</h2>
+                <p class="text-lg text-gray-400 mt-3 max-w-3xl mx-auto">Choose your path or join them all. Here are our focused learning schedules. Click to view the detailed plan for each track.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Timetable Card 1 -->
+                <div class="timetable-card p-8 text-center flex flex-col items-center justify-center h-64">
+                    <h3 class="text-2xl font-bold text-white mb-4 z-10">Django Essentials</h3>
+                    <p class="text-gray-400 mb-6 z-10">Build powerful, secure, and scalable web applications with this high-level Python framework.</p>
+                    <a href="Django-TimeTable.html" class="btn-secondary font-bold py-2 px-6 rounded-lg z-10">View Timetable</a>
+                </div>
+                <!-- Timetable Card 2 -->
+                <div class="timetable-card p-8 text-center flex flex-col items-center justify-center h-64">
+                    <h3 class="text-2xl font-bold text-white mb-4 z-10">AI & ML Phase I</h3>
+                    <p class="text-gray-400 mb-6 z-10">Begin your journey into AI. Learn the core concepts of data science and foundational machine learning models.</p>
+                    <a href="AI-TimeTable.html" class="btn-secondary font-bold py-2 px-6 rounded-lg z-10">View Timetable</a>
+                </div>
+                <!-- Timetable Card 3 -->
+                 <div class="timetable-card p-8 text-center flex flex-col items-center justify-center h-64">
+                    <h3 class="text-2xl font-bold text-white mb-4 z-10">Beginner Friendly React</h3>
+                    <p class="text-gray-400 mb-6 z-10">Create dynamic, interactive, and modern user interfaces with the industry's most popular JavaScript library.</p>
+                    <a href="React-TimeTable.html" class="btn-secondary font-bold py-2 px-6 rounded-lg z-10">View Timetable</a>
+                </div>
+                 <!-- Timetable Card 4 -->
+                <div class="timetable-card p-8 text-center flex flex-col items-center justify-center h-64">
+                    <h3 class="text-2xl font-bold text-white mb-4 z-10">Java-Script One Shot</h3>
+                    <p class="text-gray-400 mb-6 z-10">Grasp the core language of the web, from variables to DOM manipulation, in one comprehensive session.</p>
+                    <a href="JS-TimeTable.html" class="btn-secondary font-bold py-2 px-6 rounded-lg z-10">View Timetable</a>
+                </div>
+                 <!-- Timetable Card 5 -->
+                <div class="timetable-card p-8 text-center flex flex-col items-center justify-center h-64">
+                    <h3 class="text-2xl font-bold text-white mb-4 z-10">Terminal-Bash One Shot</h3>
+                    <p class="text-gray-400 mb-6 z-10">Master the command line. Unlock the essential tool for every developer to navigate systems and automate tasks.</p>
+                    <a href="Terminal-TimeTable.html" class="btn-secondary font-bold py-2 px-6 rounded-lg z-10">View Timetable</a>
+                </div>
+                <!-- Timetable Card 6 -->
+                <div class="timetable-card p-8 text-center flex flex-col items-center justify-center h-64">
+                    <h3 class="text-2xl font-bold text-white mb-4 z-10">Git-Github One Shot</h3>
+                    <p class="text-gray-400 mb-6 z-10">Learn the fundamentals of version control. Collaborate on code, track changes, and manage projects like a pro.</p>
+                    <a href="Git-TimeTable.html" class="btn-secondary font-bold py-2 px-6 rounded-lg z-10">View Timetable</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Job Market Insights Section -->
+        <section id="market" class="py-20 reveal">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-white">The 2025 Job Market: Our Compass</h2>
+                <p class="text-lg text-gray-400 mt-3 max-w-2xl mx-auto">The market isn't just growing; it's undergoing a "strategic recalibration." We focus on where the demand is surging.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="section-card p-6">
+                    <h3 class="text-xl font-bold text-[#58A6FF] mb-3">🔥 Most In-Demand Roles</h3>
+                    <ul class="space-y-2">
+                        <li>AI/ML Engineer</li>
+                        <li>Data Scientist & Analyst</li>
+                        <li>Cybersecurity Specialist</li>
+                        <li>Cloud Engineer</li>
+                        <li>DevOps Engineer</li>
+                    </ul>
+                </div>
+                <div class="section-card p-6">
+                    <h3 class="text-xl font-bold text-[#58A6FF] mb-3">🚀 Key Growth Industries</h3>
+                     <ul class="space-y-2">
+                        <li>AI-Powered Fintech</li>
+                        <li>Digital Transformation in Healthcare</li>
+                        <li>Green Energy & Sustainability Tech</li>
+                        <li>Cloud Computing & Infrastructure</li>
+                        <li>E-commerce & Scalable Platforms</li>
+                    </ul>
+                </div>
+                <div class="section-card p-6">
+                    <h3 class="text-xl font-bold text-[#58A6FF] mb-3">🧠 The New Employer Mindset</h3>
+                    <p>Companies want more than just coders. They seek T-shaped engineers with product thinking, scalability expertise, and the ability to leverage AI for productivity and innovation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- What Skills We Will Learn Section -->
+        <section id="skills" class="py-20 reveal">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-white">The Skills We're Mastering Together</h2>
+                <p class="text-lg text-gray-400 mt-3 max-w-2xl mx-auto">From foundational tech to the cutting edge, this is our shared curriculum for success.</p>
+            </div>
+            <div class="space-y-8">
+                <!-- Technical Skills -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Technical Stack</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-tag px-3 py-1 rounded-full">React</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">Node.js</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">Python</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">PostgreSQL</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">MongoDB</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">Docker</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">Kubernetes</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">AWS/GCP</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">Terraform</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">GraphQL</span>
+                         <span class="skill-tag px-3 py-1 rounded-full">Vector DBs</span>
+                    </div>
+                </div>
+                 <!-- AI & Future Skills -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">AI & The Future</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-tag px-3 py-1 rounded-full">AI Literacy</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">Prompt Engineering</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">LLM Integration (LangChain)</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">GitHub Copilot</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">WASM</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">Edge Computing</span>
+                    </div>
+                </div>
+                 <!-- Human Skills -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Essential "Human" Skills</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-tag px-3 py-1 rounded-full">Complex Problem-Solving</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">Critical Thinking</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">Product Mindset</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">Adaptability</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">Effective Communication</span>
+                        <span class="skill-tag px-3 py-1 rounded-full">System Design</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Goals Section -->
+        <section id="goals" class="py-20 reveal">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-white">Our Core Pillars for Growth</h2>
+                <p class="text-lg text-gray-400 mt-3 max-w-2xl mx-auto">These four principles guide our learning, our projects, and our community.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="section-card p-6 text-center">
+                    <h3 class="text-xl font-bold text-white mb-3">Embrace AI Synergy</h3>
+                    <p class="text-gray-400">We don't just use AI, we collaborate with it. We're mastering how to leverage AI to augment our creativity and problem-solving abilities.</p>
+                </div>
+                 <div class="section-card p-6 text-center">
+                    <h3 class="text-xl font-bold text-white mb-3">Specialize & Deepen</h3>
+                    <p class="text-gray-400">We focus on high-growth domains like AI/ML, Cloud, and Cybersecurity, building deep expertise that makes us invaluable.</p>
+                </div>
+                 <div class="section-card p-6 text-center">
+                    <h3 class="text-xl font-bold text-white mb-3">Cultivate Human Skills</h3>
+                    <p class="text-gray-400">We practice critical thinking, collaboration, and communication—the irreplaceable skills that drive innovation and leadership.</p>
+                </div>
+                 <div class="section-card p-6 text-center">
+                    <h3 class="text-xl font-bold text-white mb-3">Commit to Learning</h3>
+                    <p class="text-gray-400">The "skill half-life" is shrinking. We embrace the journey of learning, unlearning, and relearning as our core meta-skill.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-[#30363D] mt-20">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p>© 2025 Rise Together Community. Built with passion and code.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Simple Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100; // a bit less than its height
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Initial check
+        reveal();
+    </script>
+</body>
+</html>

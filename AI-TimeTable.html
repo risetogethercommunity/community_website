@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Learning Plan - Phase 1 | Rise Together</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0D1117;
+            color: #C9D1D9;
+        }
+        .glass-nav {
+            background: rgba(22, 27, 34, 0.7);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #30363D;
+        }
+        .hero-gradient-text {
+            background: linear-gradient(90deg, #58A6FF, #A371F7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-card {
+            background-color: #161B22;
+            border: 1px solid #30363D;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+        }
+        .section-card ul {
+            list-style-position: inside;
+        }
+        .timetable th {
+            background-color: #21262D;
+            color: #FFFFFF;
+            text-align: left;
+            padding: 0.75rem 1rem;
+            border-bottom: 2px solid #30363D;
+        }
+        .timetable td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #30363D;
+        }
+        .timetable tr:hover {
+            background-color: #21262D;
+        }
+        .prereq-list li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navbar -->
+    <header class="glass-nav sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="community_page.html" class="flex items-center space-x-2">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-[#58A6FF]"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <span class="text-xl font-bold text-white">Rise Together</span>
+            </a>
+            <a href="community_page.html#timetables" class="hidden md:block bg-transparent border border-blue-500 text-blue-500 font-semibold px-4 py-2 rounded-lg hover:bg-blue-500 hover:text-white transition-colors">
+                ← Back to Timetables
+            </a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Page Header -->
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white">AI/ML - Phase 1</h1>
+            <p class="text-2xl md:text-3xl font-semibold hero-gradient-text mt-2">Python, Data Analysis & Visualization</p>
+            <p class="text-lg text-gray-400 mt-4 max-w-3xl mx-auto">This 30-day plan builds the absolute foundation for a career in AI. We will master data handling and visualization with a hands-on project.</p>
+        </section>
+
+        <!-- Prerequisites & Skipped Topics -->
+        <section class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="section-card">
+                <h2 class="text-2xl font-bold text-[#58A6FF] mb-4">📌 Prerequisites</h2>
+                <ul class="space-y-3 list-disc text-gray-300 prereq-list">
+                    <li>Basic computer literacy and comfort with the command line.</li>
+                    <li><strong>Mathematics:</strong> Solid grasp of Algebra, basic Statistics (mean, median, probability), and an introduction to Linear Algebra (vectors, matrices).</li>
+                    <li><strong>Helpful:</strong> Basic understanding of economic concepts like demand/supply can aid in data interpretation but is not mandatory.</li>
+                </ul>
+            </div>
+            <div class="section-card border-yellow-500/50">
+                <h2 class="text-2xl font-bold text-yellow-400 mb-4">❌ Topics We're Skipping (For Now)</h2>
+                 <ul class="space-y-2 list-disc text-gray-300">
+                    <li>Deep learning frameworks (TensorFlow, PyTorch)</li>
+                    <li>Specific Machine Learning algorithms (e.g., Regression, SVMs)</li>
+                    <li>Deployment & MLOps (CI/CD, Docker)</li>
+                    <li>Advanced AI Mathematics</li>
+                    <li>Big Data Tools (Hadoop, Spark)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Detailed Timetable -->
+        <section class="section-card">
+            <h2 class="text-3xl font-bold text-center text-[#58A6FF] mb-8">📅 30-Day Detailed Timetable</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full text-sm timetable">
+                    <!-- Week 1: Python Foundations -->
+                    <thead><tr><th colspan="2" class="text-lg">Week 1: Python Foundations</th></tr></thead>
+                    <tbody>
+                        <tr><td>Day 1-2</td><td><strong>Python Fundamentals:</strong> Variables, Data Types, Control Flow (if/else, loops), List Comprehensions.</td></tr>
+                        <tr><td>Day 3-4</td><td><strong>Structuring Code:</strong> Functions, Modules, Packages, and Python's Data Structures (Lists, Tuples, Sets, Dictionaries).</td></tr>
+                        <tr><td>Day 5-6</td><td><strong>Practical Python:</strong> String Manipulation, File I/O, Exception Handling and Debugging.</td></tr>
+                        <tr><td>Day 7</td><td><strong>Object-Oriented Programming (OOP):</strong> Classes, Objects, Inheritance, and Encapsulation.</td></tr>
+                    </tbody>
+                    
+                    <!-- Week 2: Data Analysis Libraries -->
+                    <thead><tr><th colspan="2" class="text-lg pt-6">Week 2: Data Analysis Libraries</th></tr></thead>
+                    <tbody>
+                         <tr><td>Day 8-9</td><td><strong>Intro to NumPy:</strong> The power of ndarray, Array Creation, Indexing, Slicing, and a review of `pip` and `venv`.</td></tr>
+                         <tr><td>Day 10-11</td><td><strong>NumPy & Intro to Pandas:</strong> NumPy Operations (Broadcasting, Aggregation) and introduction to Pandas Series and DataFrame objects.</td></tr>
+                         <tr><td>Day 12-13</td><td><strong>Pandas DataFrame Manipulation:</strong> Indexing (loc, iloc), Filtering, Sorting, Handling Missing Values.</td></tr>
+                         <tr><td>Day 14-15</td><td><strong>Advanced Pandas:</strong> Merging, Joining, GroupBy operations, Aggregations, and working with external files (CSV, Excel).</td></tr>
+                    </tbody>
+
+                     <!-- Week 3: Data Visualization -->
+                    <thead><tr><th colspan="2" class="text-lg pt-6">Week 3: Data Visualization</th></tr></thead>
+                    <tbody>
+                        <tr><td>Day 16-17</td><td><strong>Intro to Visualization:</strong> Data Cleaning concepts and introduction to Matplotlib for basic plotting (Line, Bar, Scatter).</td></tr>
+                        <tr><td>Day 18-19</td><td><strong>Advanced Matplotlib:</strong> Creating subplots, histograms, pie charts, and customizing plots with styling and annotations.</td></tr>
+                        <tr><td>Day 20-21</td><td><strong>Intro to Seaborn:</strong> Statistical plots like distplot, countplot, boxplot, and violinplot for richer insights.</td></tr>
+                        <tr><td>Day 22</td><td><strong>Advanced Seaborn:</strong> Creating complex plots like heatmaps and pairplots, and integrating Seaborn with Matplotlib.</td></tr>
+                    </tbody>
+
+                     <!-- Week 4: Capstone Project -->
+                    <thead><tr><th colspan="2" class="text-lg pt-6">Week 4: Capstone Project</th></tr></thead>
+                    <tbody>
+                        <tr><td>Day 23-24</td><td><strong>Project - Student E-commerce Analysis:</strong> Project setup, data sourcing, and initial data preprocessing and cleaning.</td></tr>
+                        <tr><td>Day 25-26</td><td><strong>Analysis & Visualization:</strong> Performing exploratory data analysis (EDA), grouping data, and creating visualizations for user behavior.</td></tr>
+                        <tr><td>Day 27-28</td><td><strong>Generating Insights:</strong> Analyzing trends, identifying patterns, and preparing a narrative report from the findings.</td></tr>
+                        <tr><td>Day 29-30</td><td><strong>Finalization & Review:</strong> Finalizing the project, polishing the report/dashboard, and a final wrap-up session for Phase 1.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+         <!-- Phase 1 Project -->
+        <section class="section-card mt-12">
+            <h2 class="text-2xl font-bold text-[#58A6FF] mb-4">🚀 Phase 1 Capstone Project</h2>
+            <div>
+                <h3 class="text-xl font-semibold text-white">Student E-commerce Behavior Analysis</h3>
+                <p class="text-gray-400 mt-2 mb-4">The goal is to apply all the skills learned in Phase 1 to a real-world scenario. You will act as a data analyst for a student-focused e-commerce platform.</p>
+                <ul class="list-disc space-y-2 text-gray-300">
+                    <li><strong>Data Handling:</strong> Import and thoroughly clean raw student shopping data from a CSV file.</li>
+                    <li><strong>Analysis:</strong> Use Pandas to analyze top product categories, peak purchase times, and spending patterns.</li>
+                    <li><strong>Visualization:</strong> Use Matplotlib and Seaborn to create compelling charts visualizing top-selling products and key trends.</li>
+                    <li><strong>Reporting:</strong> Generate a final report or a simple interactive dashboard that summarizes key insights for business stakeholders.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

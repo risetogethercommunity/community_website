@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30-Day React Learning Plan | Rise Together</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0D1117;
+            color: #C9D1D9;
+        }
+        .glass-nav {
+            background: rgba(22, 27, 34, 0.7);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #30363D;
+        }
+        .hero-gradient-text {
+            background: linear-gradient(90deg, #58A6FF, #A371F7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-card {
+            background-color: #161B22;
+            border: 1px solid #30363D;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+        }
+        .timetable th {
+            background-color: #21262D;
+            color: #FFFFFF;
+            text-align: left;
+            padding: 0.75rem 1rem;
+            border-bottom: 2px solid #30363D;
+        }
+        .timetable td {
+            padding: 1rem;
+            border-bottom: 1px solid #30363D;
+        }
+        .timetable tr:hover {
+            background-color: #21262D;
+        }
+        .day-cell {
+            font-weight: 600;
+            color: #8B949E;
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navbar -->
+    <header class="glass-nav sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="community_page.html" class="flex items-center space-x-2">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-[#58A6FF]"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <span class="text-xl font-bold text-white">Rise Together</span>
+            </a>
+            <a href="community_page.html#timetables" class="hidden md:block bg-transparent border border-blue-500 text-blue-500 font-semibold px-4 py-2 rounded-lg hover:bg-blue-500 hover:text-white transition-colors">
+                ← Back to Timetables
+            </a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- Page Header -->
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white">Advanced Frontend Track</h1>
+            <p class="text-2xl md:text-3xl font-semibold hero-gradient-text mt-2">30-Day React.js Learning Plan</p>
+        </section>
+
+        <!-- Main Project Highlight -->
+        <section class="section-card mb-12 border-green-500/50">
+            <h2 class="text-2xl font-bold text-green-400 mb-4">🛒 Main Project: Student E-commerce Website</h2>
+            <p class="mb-3 text-gray-300">Over 30 days, we will build a complete e-commerce site from scratch. This hands-on approach ensures we apply every concept we learn. Features will include:</p>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 list-disc list-inside text-gray-400">
+                <li>Product listings & detail pages</li>
+                <li>Dynamic cart & checkout</li>
+                <li>Firebase authentication</li>
+                <li>Protected admin dashboard</li>
+                <li>Search & filtering</li>
+                <li>Responsive design with dark mode</li>
+            </ul>
+        </section>
+
+        <!-- Prerequisites & Skipped Topics -->
+        <section class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="section-card">
+                <h2 class="text-2xl font-bold text-[#58A6FF] mb-4">📚 Prerequisites</h2>
+                <ul class="list-disc list-inside space-y-2 text-gray-300">
+                    <li>Strong proficiency in HTML, CSS, and ES6+ JavaScript.</li>
+                    <li>Experience with DOM manipulation and events.</li>
+                    <li>Understanding of APIs and JSON.</li>
+                    <li>Comfortable with Git, GitHub, and the command line.</li>
+                </ul>
+            </div>
+            <div class="section-card">
+                <h2 class="text-2xl font-bold text-yellow-400 mb-4">⛔ Skipped Topics & Why</h2>
+                 <ul class="list-disc list-inside space-y-2 text-gray-300">
+                    <li><strong>Redux:</strong> We master React's native Context API first, which is sufficient for many apps. Redux is a next-level step.</li>
+                    <li><strong>Advanced Patterns:</strong> Render Props & HOCs are less common with modern hooks. We focus on what's most relevant.</li>
+                    <li><strong>Jest / RTL:</strong> Testing is a crucial but separate skill. Our 30-day focus is on building functionality.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Detailed Timetable -->
+        <section class="section-card">
+            <h2 class="text-3xl font-bold text-center text-[#58A6FF] mb-8">📆 30-Day React Timetable</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full text-sm timetable">
+                    <!-- Week 1 -->
+                    <thead><tr><th colspan="3" class="text-lg">Week 1: React Fundamentals & Project Setup</th></tr></thead>
+                    <tbody>
+                        <tr><td class="day-cell">Day 1-2</td><td class="font-semibold">JSX & Components</td><td>Setup with Vite, file structure, functional components, props, reusability.</td></tr>
+                        <tr><td class="day-cell">Day 3-5</td><td class="font-semibold">State & Events</td><td>`useState` hook, event handling, conditional rendering, list rendering with keys.</td></tr>
+                        <tr><td class="day-cell">Day 6-7</td><td class="font-semibold">Forms & Hooks</td><td>Controlled components for forms, refactoring logic into custom hooks.</td></tr>
+                    </tbody>
+                    <!-- Week 2 -->
+                    <thead><tr><th colspan="3" class="text-lg pt-6">Week 2: Side Effects, Routing & Global State</th></tr></thead>
+                    <tbody>
+                        <tr><td class="day-cell">Day 8-10</td><td class="font-semibold">`useEffect` & API Calls</td><td>Handling side effects, fetching data from APIs, managing loading/error states.</td></tr>
+                        <tr><td class="day-cell">Day 11-12</td><td class="font-semibold">React Router</td><td>Setup pages (Home, Product, Cart), dynamic routes with URL params.</td></tr>
+                        <tr><td class="day-cell">Day 13-15</td><td class="font-semibold">Context API & Firebase Auth</td><td>Global state for cart/auth, local storage persistence, login with Firebase.</td></tr>
+                    </tbody>
+                     <!-- Week 3 -->
+                    <thead><tr><th colspan="3" class="text-lg pt-6">Week 3: Advanced Features & UI/UX</th></tr></thead>
+                    <tbody>
+                        <tr><td class="day-cell">Day 16-18</td><td class="font-semibold">Protected Routes & Checkout</td><td>Guard routes for logged-in users, build checkout page UI and forms.</td></tr>
+                        <tr><td class="day-cell">Day 19-21</td><td class="font-semibold">Search, Filters & UI Polish</td><td>Implement product filtering, loading skeletons, and dark mode toggle.</td></tr>
+                        <tr><td class="day-cell">Day 22-23</td><td class="font-semibold">UX Enhancements</td><td>Pagination, lazy loading images, and adding animations with Framer Motion.</td></tr>
+                    </tbody>
+                     <!-- Week 4 -->
+                    <thead><tr><th colspan="3" class="text-lg pt-6">Week 4: Admin Panel, Performance & Deployment</th></tr></thead>
+                    <tbody>
+                        <tr><td class="day-cell">Day 24-26</td><td class="font-semibold">Admin Dashboard (CRUD)</td><td>Create admin layout, forms for CRUD operations on products, use toasts for feedback.</td></tr>
+                        <tr><td class="day-cell">Day 27-28</td><td class="font-semibold">Performance & Deployment</td><td>Code splitting with `React.lazy`, analyzing bundle, and deploying to Netlify/Vercel.</td></tr>
+                        <tr><td class="day-cell">Day 29-30</td><td class="font-semibold text-green-400">Final Touches & Review</td><td class="text-green-400">Improve SEO with meta tags, run Lighthouse audit, and refactor code for final presentation.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

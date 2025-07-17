@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Foundations Plan | Rise Together</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0D1117;
+            color: #C9D1D9;
+        }
+        .glass-nav {
+            background: rgba(22, 27, 34, 0.7);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #30363D;
+        }
+        .hero-gradient-text {
+            background: linear-gradient(90deg, #58A6FF, #A371F7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-card {
+            background-color: #161B22;
+            border: 1px solid #30363D;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+        }
+        .day-entry {
+            border-left: 3px solid #30363D;
+            padding-left: 1.5rem;
+            transition: border-color 0.3s ease;
+        }
+        .day-entry:hover {
+            border-left-color: #58A6FF;
+        }
+        .day-entry ul {
+            list-style-type: '✓  ';
+            padding-left: 1.25rem;
+        }
+        .project-highlight {
+            background-color: #21262d;
+            border: 1px solid #3f6082;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navbar -->
+    <header class="glass-nav sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="community_page.html" class="flex items-center space-x-2">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-[#58A6FF]"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <span class="text-xl font-bold text-white">Rise Together</span>
+            </a>
+            <a href="community_page.html#timetables" class="hidden md:block bg-transparent border border-blue-500 text-blue-500 font-semibold px-4 py-2 rounded-lg hover:bg-blue-500 hover:text-white transition-colors">
+                ← Back to Timetables
+            </a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- Page Header -->
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white">Web Dev Foundations</h1>
+            <p class="text-2xl md:text-3xl font-semibold hero-gradient-text mt-2">5-Day JavaScript Essentials (Frontend Focus)</p>
+            <p class="text-lg text-gray-400 mt-4 max-w-3xl mx-auto">A high-intensity, 5-day sprint to master the core JavaScript concepts needed for modern frontend development and frameworks like React.</p>
+        </section>
+
+        <!-- Prerequisites & Skipped Topics -->
+        <section class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="section-card">
+                <h2 class="text-2xl font-bold text-[#58A6FF] mb-4">📚 Prerequisites</h2>
+                <p class="mb-3 text-gray-400">You should be comfortable with these fundamentals before starting:</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-300">
+                    <li>Basic JavaScript syntax (variables, operators, loops, conditions).</li>
+                    <li>Using `console.log()` for debugging.</li>
+                    <li>Basic HTML structure and how to link a JS file.</li>
+                </ul>
+            </div>
+            <div class="section-card border-yellow-500/50">
+                <h2 class="text-2xl font-bold text-yellow-400 mb-4">❌ Topics We're Skipping & Why</h2>
+                 <ul class="list-disc list-inside space-y-2 text-gray-300">
+                    <li><strong>Prototypes & `class` keyword:</strong> We focus on functional patterns, which are dominant in modern frameworks like React.</li>
+                    <li><strong>`eval()`, `with`:</strong> These are considered bad practice and are not used in professional development.</li>
+                    <li><strong>Advanced Async (Generators, Web Workers):</strong> Not required for building typical frontend applications at this stage.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Detailed 5-Day Timetable -->
+        <section class="section-card">
+             <h2 class="text-3xl font-bold text-center text-[#58A6FF] mb-8">📅 5-Day JavaScript Timetable</h2>
+             <div class="space-y-8">
+                <!-- Day 1 -->
+                <div class="day-entry">
+                    <h3 class="text-xl font-semibold text-gray-200">Day 1: JS Core Concepts Deep Dive</h3>
+                    <ul class="mt-2 text-gray-400">
+                        <li><strong>Scope & Hoisting:</strong> Master `var` vs `let` vs `const`.</li>
+                        <li><strong>Data Structures:</strong> Deep dive into Arrays and Objects.</li>
+                        <li><strong>Functions:</strong> Declaration, Expression, and Arrow Functions.</li>
+                        <li><strong>Modern Syntax:</strong> Destructuring, Spread & Rest operators.</li>
+                    </ul>
+                    <div class="project-highlight">
+                        <p class="font-semibold text-blue-300">🎯 Today's Goal: Solidify theory with hands-on console exercises for each concept.</p>
+                    </div>
+                </div>
+                <!-- Day 2 -->
+                 <div class="day-entry">
+                    <h3 class="text-xl font-semibold text-gray-200">Day 2: The Document Object Model (DOM)</h3>
+                    <ul class="mt-2 text-gray-400">
+                        <li><strong>Selectors:</strong> `querySelector`, `getElementById`, etc.</li>
+                        <li><strong>Manipulation:</strong> Create, update, and remove HTML elements dynamically.</li>
+                        <li><strong>Events:</strong> Handle user actions with `addEventListener` (`click`, `input`, `submit`).</li>
+                        <li><strong>Event Object:</strong> Use `event.target` and `event.preventDefault()`.</li>
+                    </ul>
+                    <div class="project-highlight">
+                        <p class="font-semibold text-blue-300">🛠️ Project: Build a fully functional To-Do List App using DOM manipulation.</p>
+                    </div>
+                </div>
+                <!-- Day 3 -->
+                <div class="day-entry">
+                    <h3 class="text-xl font-semibold text-gray-200">Day 3: Mastering ES6+</h3>
+                    <ul class="mt-2 text-gray-400">
+                        <li><strong>Recap & Deepen:</strong> Arrow Functions, Destructuring.</li>
+                        <li><strong>New Tools:</strong> Template Literals, Default Parameters, Optional Chaining (`?.`).</li>
+                        <li><strong>Logic:</strong> Ternary Operators and Short-circuiting (`&&`, `||`).</li>
+                        <li><strong>Organization:</strong> Basic `import`/`export` for modular code.</li>
+                    </ul>
+                     <div class="project-highlight">
+                        <p class="font-semibold text-blue-300">🛠️ Project: Create an Image Gallery with a lightbox feature using modern ES6 syntax.</p>
+                    </div>
+                </div>
+                <!-- Day 4 -->
+                <div class="day-entry">
+                    <h3 class="text-xl font-semibold text-gray-200">Day 4: Asynchronous JavaScript</h3>
+                    <ul class="mt-2 text-gray-400">
+                        <li><strong>The Event Loop:</strong> Understand how async JS works.</li>
+                        <li><strong>Callbacks & Timers:</strong> `setTimeout`, `setInterval`.</li>
+                        <li><strong>Promises:</strong> The modern way to handle async operations (`.then`, `.catch`).</li>
+                        <li><strong>Async/Await:</strong> Syntactic sugar that makes async code clean and readable.</li>
+                    </ul>
+                    <div class="project-highlight">
+                        <p class="font-semibold text-blue-300">🛠️ Project: Build a Digital Clock or a Countdown Timer.</p>
+                    </div>
+                </div>
+                <!-- Day 5 -->
+                 <div class="day-entry">
+                    <h3 class="text-xl font-semibold text-green-400">Day 5: Working with APIs</h3>
+                    <ul class="mt-2 text-gray-400">
+                        <li><strong>JSON:</strong> Learn to parse and stringify JavaScript objects.</li>
+                        <li><strong>`fetch` API:</strong> Make network requests to get data from servers.</li>
+                        <li><strong>API Integration:</strong> Combine `fetch` with `async/await` for clean API calls.</li>
+                        <li><strong>Error Handling:</strong> Gracefully handle API errors and response codes.</li>
+                    </ul>
+                     <div class="project-highlight">
+                        <p class="font-semibold text-green-300">🚀 Final Project: Build a Weather App that fetches and displays live data from a public API.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

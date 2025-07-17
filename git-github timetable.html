@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity & Secure Workflows | Rise Together</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0D1117;
+            color: #C9D1D9;
+        }
+        .glass-nav {
+            background: rgba(22, 27, 34, 0.7);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #30363D;
+        }
+        .hero-gradient-text {
+            background: linear-gradient(90deg, #58A6FF, #A371F7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-card {
+            background-color: #161B22;
+            border: 1px solid #30363D;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+        }
+        .session-group h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #30363D;
+        }
+        .topic-entry {
+            background-color: #0D1117;
+            border: 1px solid #30363D;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            transition: all 0.3s ease;
+        }
+        .topic-entry:hover {
+            border-color: #58A6FF;
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navbar -->
+    <header class="glass-nav sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="community_page.html" class="flex items-center space-x-2">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-[#58A6FF]"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <span class="text-xl font-bold text-white">Rise Together</span>
+            </a>
+            <a href="community_page.html#timetables" class="hidden md:block bg-transparent border border-blue-500 text-blue-500 font-semibold px-4 py-2 rounded-lg hover:bg-blue-500 hover:text-white transition-colors">
+                ← Back to Timetables
+            </a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- Page Header -->
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white">Cybersecurity Essentials Track</h1>
+            <p class="text-2xl md:text-3xl font-semibold hero-gradient-text mt-2">One-Day Git & Secure Workflow Intensive</p>
+            <p class="text-lg text-gray-400 mt-4 max-w-3xl mx-auto">Master version control with Git and GitHub in a single day. This is a foundational skill for secure coding, collaboration, and modern DevSecOps.</p>
+        </section>
+
+        <!-- Timetable -->
+        <section class="section-card">
+            <h2 class="text-3xl font-bold text-center text-[#58A6FF] mb-8">🚀 One-Day Intensive Workshop Plan</h2>
+            
+            <!-- Morning Session -->
+            <div class="session-group mb-12">
+                <h3>Morning Session (9 AM - 1 PM): The Fundamentals</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="topic-entry">
+                        <h4 class="text-lg font-semibold text-gray-200 mb-2">1. Intro to Version Control</h4>
+                        <p class="text-gray-400">What is it? Git vs. GitHub. Installation and configuration.</p>
+                    </div>
+                    <div class="topic-entry">
+                        <h4 class="text-lg font-semibold text-gray-200 mb-2">2. Core Git Commands</h4>
+                        <p class="text-gray-400">`init`, `add`, `commit`, `status`, `log`. The basic developer cycle.</p>
+                    </div>
+                    <div class="topic-entry">
+                        <h4 class="text-lg font-semibold text-gray-200 mb-2">3. Branching & Merging</h4>
+                        <p class="text-gray-400">`branch`, `checkout`, `merge`. Handling merge conflicts gracefully.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Afternoon Session -->
+            <div class="session-group">
+                <h3>Afternoon Session (2 PM - 6 PM): Collaboration & Advanced Topics</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                     <div class="topic-entry">
+                        <h4 class="text-lg font-semibold text-gray-200 mb-2">4. Remotes & GitHub</h4>
+                        <p class="text-gray-400">`clone`, `push`, `pull`. Connecting to GitHub with SSH/PATs.</p>
+                    </div>
+                     <div class="topic-entry">
+                        <h4 class="text-lg font-semibold text-gray-200 mb-2">5. The GitHub Workflow</h4>
+                        <p class="text-gray-400">Creating Pull Requests (PRs), code reviews, and managing issues.</p>
+                    </div>
+                     <div class="topic-entry">
+                        <h4 class="text-lg font-semibold text-gray-200 mb-2">6. Intermediate Git</h4>
+                        <p class="text-gray-400">Stashing changes, interactive `rebase`, and amending commits.</p>
+                    </div>
+                     <div class="topic-entry">
+                        <h4 class="text-lg font-semibold text-gray-200 mb-2">7. Git Tools & GUI</h4>
+                        <p class="text-gray-400">Using Git inside VS Code and an overview of GitHub Desktop.</p>
+                    </div>
+                     <div class="topic-entry">
+                        <h4 class="text-lg font-semibold text-gray-200 mb-2">8. Collaboration Models</h4>
+                        <p class="text-gray-400">Understanding GitHub Flow vs. Git Flow and the Fork & PR model.</p>
+                    </div>
+                     <div class="topic-entry">
+                        <h4 class="text-lg font-semibold text-green-400 mb-2">9. Final Project Activity</h4>
+                        <p class="text-gray-400">Simulate a team collaboration by forking a repo, creating a feature branch, and merging a PR.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
